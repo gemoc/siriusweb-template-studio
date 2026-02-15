@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.example.siriusweb_template_studio.sampleemfdomain.State#getOwningFSM <em>Owning FSM</em>}</li>
  * </ul>
  *
- * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getState()
+ * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getState()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface State extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getState_Name()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getState_Name()
 	 * @model
 	 * @generated
 	 */
@@ -55,7 +55,7 @@ public interface State extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Outgoing Transitions</em>' containment reference list.
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getState_OutgoingTransitions()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getState_OutgoingTransitions()
 	 * @see com.example.siriusweb_template_studio.sampleemfdomain.Transition#getSource
 	 * @model opposite="source" containment="true"
 	 * @generated
@@ -69,7 +69,7 @@ public interface State extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Incoming Transitions</em>' reference list.
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getState_IncomingTransitions()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getState_IncomingTransitions()
 	 * @see com.example.siriusweb_template_studio.sampleemfdomain.Transition#getTarget
 	 * @model opposite="target"
 	 * @generated
@@ -83,7 +83,7 @@ public interface State extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owning FSM</em>' container reference.
 	 * @see #setOwningFSM(FSM)
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getState_OwningFSM()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getState_OwningFSM()
 	 * @see com.example.siriusweb_template_studio.sampleemfdomain.FSM#getOwnedStates
 	 * @model opposite="ownedStates" required="true" transient="false"
 	 * @generated

@@ -10,7 +10,7 @@
       <!-- @generated sampleemfdomain -->
       <package
             uri="http://www.example.org/sampleemfdomain"
-            class="com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage"
+            class="com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage"
             genModel="src/main/resources/model/sampleemfdomain.genmodel"/>
    </extension>
 

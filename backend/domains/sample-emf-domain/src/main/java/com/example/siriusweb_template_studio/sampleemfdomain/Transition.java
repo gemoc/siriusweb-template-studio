@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.example.siriusweb_template_studio.sampleemfdomain.Transition#getSource <em>Source</em>}</li>
  * </ul>
  *
- * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getTransition()
+ * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getTransition()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface Transition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input</em>' attribute.
 	 * @see #setInput(String)
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getTransition_Input()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getTransition_Input()
 	 * @model
 	 * @generated
 	 */
@@ -54,7 +54,7 @@ public interface Transition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(State)
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getTransition_Target()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getTransition_Target()
 	 * @see com.example.siriusweb_template_studio.sampleemfdomain.State#getIncomingTransitions
 	 * @model opposite="incomingTransitions" required="true"
 	 * @generated
@@ -77,7 +77,7 @@ public interface Transition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getTransition_Name()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getTransition_Name()
 	 * @model
 	 * @generated
 	 */
@@ -99,7 +99,7 @@ public interface Transition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output</em>' attribute.
 	 * @see #setOutput(String)
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getTransition_Output()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getTransition_Output()
 	 * @model
 	 * @generated
 	 */
@@ -122,7 +122,7 @@ public interface Transition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' container reference.
 	 * @see #setSource(State)
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getTransition_Source()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getTransition_Source()
 	 * @see com.example.siriusweb_template_studio.sampleemfdomain.State#getOutgoingTransitions
 	 * @model opposite="outgoingTransitions" required="true" transient="false"
 	 * @generated

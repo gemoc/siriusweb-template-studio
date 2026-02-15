@@ -22,17 +22,4 @@
     <spring-boot.run.skip>true</spring-boot.run.skip>
   </properties>
   <packaging>pom</packaging>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-          <mainClass>
-            com.example.siriusweb_template_studio.template_studio_app.TemplateStudioAppApplication
-          </mainClass>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>

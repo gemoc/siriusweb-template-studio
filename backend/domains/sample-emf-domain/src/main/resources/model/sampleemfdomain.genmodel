@@ -9,7 +9,7 @@
     importOrganizing="true">
   <foreignModel>sampleemfdomain.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="sampleemfdomain" basePackage="com.example.siriusweb_template_studio"
+  <genPackages prefix="Sampleemfdomain" basePackage="com.example.siriusweb_template_studio"
       disposableProviderFactory="true" ecorePackage="sampleemfdomain.ecore#/">
     <genClasses ecoreClass="sampleemfdomain.ecore#//FSM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sampleemfdomain.ecore#//FSM/name"/>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.example.siriusweb-template-studio</groupId>
 		<artifactId>template-studio-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../template-studio-parent</relativePath> 
+		<relativePath>../template-studio-parent</relativePath>
 	</parent>
 	<groupId>com.example.siriusweb-template-studio</groupId>
 	<artifactId>template-studio-app</artifactId>
@@ -29,8 +29,8 @@
 	<properties>
 		<java.version>17</java.version>
 		<sirius.web.version>2026.1.0</sirius.web.version>
-    	<eef.version>2.1.5-SNAPSHOT</eef.version>
-  		<spring-boot.run.skip>false</spring-boot.run.skip>
+		<eef.version>2.1.5-SNAPSHOT</eef.version>
+		<spring-boot.run.skip>false</spring-boot.run.skip>
 	</properties>
 	<repositories>
 		<repository>
@@ -49,14 +49,14 @@
 			<id>github-syson</id>
 			<url>https://maven.pkg.github.com/eclipse-syson/syson</url>
 		</repository>
-    <repository>
-      <id>Eclipse EEF</id>
-      <name>EEF Repository - Snapshots</name>
-      <url>https://repo.eclipse.org/content/repositories/eef-snapshots/</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
+		<repository>
+			<id>Eclipse EEF</id>
+			<name>EEF Repository - Snapshots</name>
+			<url>https://repo.eclipse.org/content/repositories/eef-snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
@@ -67,7 +67,7 @@
 		<!-- SiriusWeb dependencies -->
 		<dependency>
 			<groupId>org.eclipse.sirius</groupId>
-  			<artifactId>sirius-web</artifactId>
+			<artifactId>sirius-web</artifactId>
 			<version>${sirius.web.version}</version>
 		</dependency>
 
@@ -91,8 +91,12 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>
+            com.example.siriusweb_template_studio.template_studio_app.TemplateStudioAppApplication
+					</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

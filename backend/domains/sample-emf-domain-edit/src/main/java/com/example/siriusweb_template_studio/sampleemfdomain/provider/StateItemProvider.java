@@ -2,10 +2,9 @@
  */
 package com.example.siriusweb_template_studio.sampleemfdomain.provider;
 
+import com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainFactory;
+import com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage;
 import com.example.siriusweb_template_studio.sampleemfdomain.State;
-import com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainFactory;
-import com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -73,7 +72,7 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_State_name_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_State_name_feature", "_UI_State_type"),
-						sampleemfdomainPackage.Literals.STATE__NAME, true, false, false,
+						SampleemfdomainPackage.Literals.STATE__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -89,7 +88,7 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 						getResourceLocator(), getString("_UI_State_incomingTransitions_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_State_incomingTransitions_feature",
 								"_UI_State_type"),
-						sampleemfdomainPackage.Literals.STATE__INCOMING_TRANSITIONS, true, false, true, null, null,
+						SampleemfdomainPackage.Literals.STATE__INCOMING_TRANSITIONS, true, false, true, null, null,
 						null));
 	}
 
@@ -105,7 +104,7 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(sampleemfdomainPackage.Literals.STATE__OUTGOING_TRANSITIONS);
+			childrenFeatures.add(SampleemfdomainPackage.Literals.STATE__OUTGOING_TRANSITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -169,10 +168,10 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(State.class)) {
-		case sampleemfdomainPackage.STATE__NAME:
+		case SampleemfdomainPackage.STATE__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case sampleemfdomainPackage.STATE__OUTGOING_TRANSITIONS:
+		case SampleemfdomainPackage.STATE__OUTGOING_TRANSITIONS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -190,8 +189,8 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(sampleemfdomainPackage.Literals.STATE__OUTGOING_TRANSITIONS,
-				sampleemfdomainFactory.eINSTANCE.createTransition()));
+		newChildDescriptors.add(createChildParameter(SampleemfdomainPackage.Literals.STATE__OUTGOING_TRANSITIONS,
+				SampleemfdomainFactory.eINSTANCE.createTransition()));
 	}
 
 	/**

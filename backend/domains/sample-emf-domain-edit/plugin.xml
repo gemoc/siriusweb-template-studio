@@ -10,7 +10,7 @@
       <!-- @generated sampleemfdomain -->
       <factory
             uri="http://www.example.org/sampleemfdomain"
-            class="com.example.siriusweb_template_studio.sampleemfdomain.provider.sampleemfdomainItemProviderAdapterFactory"
+            class="com.example.siriusweb_template_studio.sampleemfdomain.provider.SampleemfdomainItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

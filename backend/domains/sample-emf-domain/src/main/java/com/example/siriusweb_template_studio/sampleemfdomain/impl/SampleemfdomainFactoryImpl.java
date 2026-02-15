@@ -18,24 +18,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class sampleemfdomainFactoryImpl extends EFactoryImpl implements sampleemfdomainFactory {
+public class SampleemfdomainFactoryImpl extends EFactoryImpl implements SampleemfdomainFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static sampleemfdomainFactory init() {
+	public static SampleemfdomainFactory init() {
 		try {
-			sampleemfdomainFactory thesampleemfdomainFactory = (sampleemfdomainFactory) EPackage.Registry.INSTANCE
-					.getEFactory(sampleemfdomainPackage.eNS_URI);
-			if (thesampleemfdomainFactory != null) {
-				return thesampleemfdomainFactory;
+			SampleemfdomainFactory theSampleemfdomainFactory = (SampleemfdomainFactory) EPackage.Registry.INSTANCE
+					.getEFactory(SampleemfdomainPackage.eNS_URI);
+			if (theSampleemfdomainFactory != null) {
+				return theSampleemfdomainFactory;
 			}
 		} catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new sampleemfdomainFactoryImpl();
+		return new SampleemfdomainFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class sampleemfdomainFactoryImpl extends EFactoryImpl implements sampleem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public sampleemfdomainFactoryImpl() {
+	public SampleemfdomainFactoryImpl() {
 		super();
 	}
 
@@ -56,11 +56,11 @@ public class sampleemfdomainFactoryImpl extends EFactoryImpl implements sampleem
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case sampleemfdomainPackage.FSM:
+		case SampleemfdomainPackage.FSM:
 			return createFSM();
-		case sampleemfdomainPackage.STATE:
+		case SampleemfdomainPackage.STATE:
 			return createState();
-		case sampleemfdomainPackage.TRANSITION:
+		case SampleemfdomainPackage.TRANSITION:
 			return createTransition();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -106,8 +106,8 @@ public class sampleemfdomainFactoryImpl extends EFactoryImpl implements sampleem
 	 * @generated
 	 */
 	@Override
-	public sampleemfdomainPackage getsampleemfdomainPackage() {
-		return (sampleemfdomainPackage) getEPackage();
+	public SampleemfdomainPackage getSampleemfdomainPackage() {
+		return (SampleemfdomainPackage) getEPackage();
 	}
 
 	/**
@@ -117,8 +117,8 @@ public class sampleemfdomainFactoryImpl extends EFactoryImpl implements sampleem
 	 * @generated
 	 */
 	@Deprecated
-	public static sampleemfdomainPackage getPackage() {
-		return sampleemfdomainPackage.eINSTANCE;
+	public static SampleemfdomainPackage getPackage() {
+		return SampleemfdomainPackage.eINSTANCE;
 	}
 
-} //sampleemfdomainFactoryImpl
+} //SampleemfdomainFactoryImpl

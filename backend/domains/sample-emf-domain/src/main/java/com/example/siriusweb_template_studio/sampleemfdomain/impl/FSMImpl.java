@@ -3,9 +3,8 @@
 package com.example.siriusweb_template_studio.sampleemfdomain.impl;
 
 import com.example.siriusweb_template_studio.sampleemfdomain.FSM;
+import com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage;
 import com.example.siriusweb_template_studio.sampleemfdomain.State;
-import com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -105,7 +104,7 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return sampleemfdomainPackage.Literals.FSM;
+		return SampleemfdomainPackage.Literals.FSM;
 	}
 
 	/**
@@ -128,7 +127,7 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sampleemfdomainPackage.FSM__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, SampleemfdomainPackage.FSM__NAME, oldName, name));
 	}
 
 	/**
@@ -140,7 +139,7 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	public EList<State> getOwnedStates() {
 		if (ownedStates == null) {
 			ownedStates = new EObjectContainmentWithInverseEList<State>(State.class, this,
-					sampleemfdomainPackage.FSM__OWNED_STATES, sampleemfdomainPackage.STATE__OWNING_FSM);
+					SampleemfdomainPackage.FSM__OWNED_STATES, SampleemfdomainPackage.STATE__OWNING_FSM);
 		}
 		return ownedStates;
 	}
@@ -157,7 +156,7 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			initialState = (State) eResolveProxy(oldInitialState);
 			if (initialState != oldInitialState) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sampleemfdomainPackage.FSM__INITIAL_STATE,
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SampleemfdomainPackage.FSM__INITIAL_STATE,
 							oldInitialState, initialState));
 			}
 		}
@@ -183,7 +182,7 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		State oldInitialState = initialState;
 		initialState = newInitialState;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sampleemfdomainPackage.FSM__INITIAL_STATE,
+			eNotify(new ENotificationImpl(this, Notification.SET, SampleemfdomainPackage.FSM__INITIAL_STATE,
 					oldInitialState, initialState));
 	}
 
@@ -199,7 +198,7 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			finalState = (State) eResolveProxy(oldFinalState);
 			if (finalState != oldFinalState) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sampleemfdomainPackage.FSM__FINAL_STATE,
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SampleemfdomainPackage.FSM__FINAL_STATE,
 							oldFinalState, finalState));
 			}
 		}
@@ -225,7 +224,7 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		State oldFinalState = finalState;
 		finalState = newFinalState;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sampleemfdomainPackage.FSM__FINAL_STATE,
+			eNotify(new ENotificationImpl(this, Notification.SET, SampleemfdomainPackage.FSM__FINAL_STATE,
 					oldFinalState, finalState));
 	}
 
@@ -238,7 +237,7 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case sampleemfdomainPackage.FSM__OWNED_STATES:
+		case SampleemfdomainPackage.FSM__OWNED_STATES:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOwnedStates()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -252,7 +251,7 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case sampleemfdomainPackage.FSM__OWNED_STATES:
+		case SampleemfdomainPackage.FSM__OWNED_STATES:
 			return ((InternalEList<?>) getOwnedStates()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -266,15 +265,15 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case sampleemfdomainPackage.FSM__NAME:
+		case SampleemfdomainPackage.FSM__NAME:
 			return getName();
-		case sampleemfdomainPackage.FSM__OWNED_STATES:
+		case SampleemfdomainPackage.FSM__OWNED_STATES:
 			return getOwnedStates();
-		case sampleemfdomainPackage.FSM__INITIAL_STATE:
+		case SampleemfdomainPackage.FSM__INITIAL_STATE:
 			if (resolve)
 				return getInitialState();
 			return basicGetInitialState();
-		case sampleemfdomainPackage.FSM__FINAL_STATE:
+		case SampleemfdomainPackage.FSM__FINAL_STATE:
 			if (resolve)
 				return getFinalState();
 			return basicGetFinalState();
@@ -291,17 +290,17 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case sampleemfdomainPackage.FSM__NAME:
+		case SampleemfdomainPackage.FSM__NAME:
 			setName((String) newValue);
 			return;
-		case sampleemfdomainPackage.FSM__OWNED_STATES:
+		case SampleemfdomainPackage.FSM__OWNED_STATES:
 			getOwnedStates().clear();
 			getOwnedStates().addAll((Collection<? extends State>) newValue);
 			return;
-		case sampleemfdomainPackage.FSM__INITIAL_STATE:
+		case SampleemfdomainPackage.FSM__INITIAL_STATE:
 			setInitialState((State) newValue);
 			return;
-		case sampleemfdomainPackage.FSM__FINAL_STATE:
+		case SampleemfdomainPackage.FSM__FINAL_STATE:
 			setFinalState((State) newValue);
 			return;
 		}
@@ -316,16 +315,16 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case sampleemfdomainPackage.FSM__NAME:
+		case SampleemfdomainPackage.FSM__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case sampleemfdomainPackage.FSM__OWNED_STATES:
+		case SampleemfdomainPackage.FSM__OWNED_STATES:
 			getOwnedStates().clear();
 			return;
-		case sampleemfdomainPackage.FSM__INITIAL_STATE:
+		case SampleemfdomainPackage.FSM__INITIAL_STATE:
 			setInitialState((State) null);
 			return;
-		case sampleemfdomainPackage.FSM__FINAL_STATE:
+		case SampleemfdomainPackage.FSM__FINAL_STATE:
 			setFinalState((State) null);
 			return;
 		}
@@ -340,13 +339,13 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case sampleemfdomainPackage.FSM__NAME:
+		case SampleemfdomainPackage.FSM__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case sampleemfdomainPackage.FSM__OWNED_STATES:
+		case SampleemfdomainPackage.FSM__OWNED_STATES:
 			return ownedStates != null && !ownedStates.isEmpty();
-		case sampleemfdomainPackage.FSM__INITIAL_STATE:
+		case SampleemfdomainPackage.FSM__INITIAL_STATE:
 			return initialState != null;
-		case sampleemfdomainPackage.FSM__FINAL_STATE:
+		case SampleemfdomainPackage.FSM__FINAL_STATE:
 			return finalState != null;
 		}
 		return super.eIsSet(featureID);

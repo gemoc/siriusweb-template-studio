@@ -3,9 +3,8 @@
 package com.example.siriusweb_template_studio.sampleemfdomain.provider;
 
 import com.example.siriusweb_template_studio.sampleemfdomain.FSM;
-import com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainFactory;
-import com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage;
-
+import com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainFactory;
+import com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -74,7 +73,7 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FSM_name_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_FSM_name_feature", "_UI_FSM_type"),
-						sampleemfdomainPackage.Literals.FSM__NAME, true, false, false,
+						SampleemfdomainPackage.Literals.FSM__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -89,7 +88,7 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FSM_initialState_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_FSM_initialState_feature", "_UI_FSM_type"),
-						sampleemfdomainPackage.Literals.FSM__INITIAL_STATE, true, false, true, null, null, null));
+						SampleemfdomainPackage.Literals.FSM__INITIAL_STATE, true, false, true, null, null, null));
 	}
 
 	/**
@@ -103,7 +102,7 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FSM_finalState_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_FSM_finalState_feature", "_UI_FSM_type"),
-						sampleemfdomainPackage.Literals.FSM__FINAL_STATE, true, false, true, null, null, null));
+						SampleemfdomainPackage.Literals.FSM__FINAL_STATE, true, false, true, null, null, null));
 	}
 
 	/**
@@ -118,7 +117,7 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(sampleemfdomainPackage.Literals.FSM__OWNED_STATES);
+			childrenFeatures.add(SampleemfdomainPackage.Literals.FSM__OWNED_STATES);
 		}
 		return childrenFeatures;
 	}
@@ -182,10 +181,10 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FSM.class)) {
-		case sampleemfdomainPackage.FSM__NAME:
+		case SampleemfdomainPackage.FSM__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case sampleemfdomainPackage.FSM__OWNED_STATES:
+		case SampleemfdomainPackage.FSM__OWNED_STATES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -203,8 +202,8 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(sampleemfdomainPackage.Literals.FSM__OWNED_STATES,
-				sampleemfdomainFactory.eINSTANCE.createState()));
+		newChildDescriptors.add(createChildParameter(SampleemfdomainPackage.Literals.FSM__OWNED_STATES,
+				SampleemfdomainFactory.eINSTANCE.createState()));
 	}
 
 	/**

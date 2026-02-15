@@ -2,10 +2,10 @@
  */
 package com.example.siriusweb_template_studio.sampleemfdomain.impl;
 
+import com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainFactory;
+import com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage;
 import com.example.siriusweb_template_studio.sampleemfdomain.State;
 import com.example.siriusweb_template_studio.sampleemfdomain.Transition;
-import com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainFactory;
-import com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class sampleemfdomainPackageImpl extends EPackageImpl implements sampleemfdomainPackage {
+public class SampleemfdomainPackageImpl extends EPackageImpl implements SampleemfdomainPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -53,12 +53,12 @@ public class sampleemfdomainPackageImpl extends EPackageImpl implements sampleem
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#eNS_URI
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private sampleemfdomainPackageImpl() {
-		super(eNS_URI, sampleemfdomainFactory.eINSTANCE);
+	private SampleemfdomainPackageImpl() {
+		super(eNS_URI, SampleemfdomainFactory.eINSTANCE);
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class sampleemfdomainPackageImpl extends EPackageImpl implements sampleem
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 *
-	 * <p>This method is used to initialize {@link sampleemfdomainPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link SampleemfdomainPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -80,30 +80,30 @@ public class sampleemfdomainPackageImpl extends EPackageImpl implements sampleem
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static sampleemfdomainPackage init() {
+	public static SampleemfdomainPackage init() {
 		if (isInited)
-			return (sampleemfdomainPackage) EPackage.Registry.INSTANCE.getEPackage(sampleemfdomainPackage.eNS_URI);
+			return (SampleemfdomainPackage) EPackage.Registry.INSTANCE.getEPackage(SampleemfdomainPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object registeredsampleemfdomainPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		sampleemfdomainPackageImpl thesampleemfdomainPackage = registeredsampleemfdomainPackage instanceof sampleemfdomainPackageImpl
-				? (sampleemfdomainPackageImpl) registeredsampleemfdomainPackage
-				: new sampleemfdomainPackageImpl();
+		Object registeredSampleemfdomainPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		SampleemfdomainPackageImpl theSampleemfdomainPackage = registeredSampleemfdomainPackage instanceof SampleemfdomainPackageImpl
+				? (SampleemfdomainPackageImpl) registeredSampleemfdomainPackage
+				: new SampleemfdomainPackageImpl();
 
 		isInited = true;
 
 		// Create package meta-data objects
-		thesampleemfdomainPackage.createPackageContents();
+		theSampleemfdomainPackage.createPackageContents();
 
 		// Initialize created meta-data
-		thesampleemfdomainPackage.initializePackageContents();
+		theSampleemfdomainPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		thesampleemfdomainPackage.freeze();
+		theSampleemfdomainPackage.freeze();
 
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(sampleemfdomainPackage.eNS_URI, thesampleemfdomainPackage);
-		return thesampleemfdomainPackage;
+		EPackage.Registry.INSTANCE.put(SampleemfdomainPackage.eNS_URI, theSampleemfdomainPackage);
+		return theSampleemfdomainPackage;
 	}
 
 	/**
@@ -272,8 +272,8 @@ public class sampleemfdomainPackageImpl extends EPackageImpl implements sampleem
 	 * @generated
 	 */
 	@Override
-	public sampleemfdomainFactory getsampleemfdomainFactory() {
-		return (sampleemfdomainFactory) getEFactoryInstance();
+	public SampleemfdomainFactory getSampleemfdomainFactory() {
+		return (SampleemfdomainFactory) getEFactoryInstance();
 	}
 
 	/**
@@ -394,4 +394,4 @@ public class sampleemfdomainPackageImpl extends EPackageImpl implements sampleem
 		createResource(eNS_URI);
 	}
 
-} //sampleemfdomainPackageImpl
+} //SampleemfdomainPackageImpl

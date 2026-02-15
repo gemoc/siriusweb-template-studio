@@ -16,17 +16,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage
+ * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage
  * @generated
  */
-public class sampleemfdomainAdapterFactory extends AdapterFactoryImpl {
+public class SampleemfdomainAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static sampleemfdomainPackage modelPackage;
+	protected static SampleemfdomainPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class sampleemfdomainAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public sampleemfdomainAdapterFactory() {
+	public SampleemfdomainAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = sampleemfdomainPackage.eINSTANCE;
+			modelPackage = SampleemfdomainPackage.eINSTANCE;
 		}
 	}
 
@@ -65,7 +65,7 @@ public class sampleemfdomainAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected sampleemfdomainSwitch<Adapter> modelSwitch = new sampleemfdomainSwitch<Adapter>() {
+	protected SampleemfdomainSwitch<Adapter> modelSwitch = new SampleemfdomainSwitch<Adapter>() {
 		@Override
 		public Adapter caseFSM(FSM object) {
 			return createFSMAdapter();
@@ -154,4 +154,4 @@ public class sampleemfdomainAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //sampleemfdomainAdapterFactory
+} //SampleemfdomainAdapterFactory

@@ -2,10 +2,9 @@
  */
 package com.example.siriusweb_template_studio.sampleemfdomain.impl;
 
+import com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage;
 import com.example.siriusweb_template_studio.sampleemfdomain.State;
 import com.example.siriusweb_template_studio.sampleemfdomain.Transition;
-import com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -121,7 +120,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return sampleemfdomainPackage.Literals.TRANSITION;
+		return SampleemfdomainPackage.Literals.TRANSITION;
 	}
 
 	/**
@@ -144,7 +143,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		String oldInput = input;
 		input = newInput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sampleemfdomainPackage.TRANSITION__INPUT, oldInput,
+			eNotify(new ENotificationImpl(this, Notification.SET, SampleemfdomainPackage.TRANSITION__INPUT, oldInput,
 					input));
 	}
 
@@ -160,7 +159,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			target = (State) eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sampleemfdomainPackage.TRANSITION__TARGET,
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SampleemfdomainPackage.TRANSITION__TARGET,
 							oldTarget, target));
 			}
 		}
@@ -186,7 +185,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		target = newTarget;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					sampleemfdomainPackage.TRANSITION__TARGET, oldTarget, newTarget);
+					SampleemfdomainPackage.TRANSITION__TARGET, oldTarget, newTarget);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -206,15 +205,15 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			NotificationChain msgs = null;
 			if (target != null)
 				msgs = ((InternalEObject) target).eInverseRemove(this,
-						sampleemfdomainPackage.STATE__INCOMING_TRANSITIONS, State.class, msgs);
+						SampleemfdomainPackage.STATE__INCOMING_TRANSITIONS, State.class, msgs);
 			if (newTarget != null)
 				msgs = ((InternalEObject) newTarget).eInverseAdd(this,
-						sampleemfdomainPackage.STATE__INCOMING_TRANSITIONS, State.class, msgs);
+						SampleemfdomainPackage.STATE__INCOMING_TRANSITIONS, State.class, msgs);
 			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sampleemfdomainPackage.TRANSITION__TARGET, newTarget,
+			eNotify(new ENotificationImpl(this, Notification.SET, SampleemfdomainPackage.TRANSITION__TARGET, newTarget,
 					newTarget));
 	}
 
@@ -238,7 +237,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sampleemfdomainPackage.TRANSITION__NAME, oldName,
+			eNotify(new ENotificationImpl(this, Notification.SET, SampleemfdomainPackage.TRANSITION__NAME, oldName,
 					name));
 	}
 
@@ -262,7 +261,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		String oldOutput = output;
 		output = newOutput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sampleemfdomainPackage.TRANSITION__OUTPUT, oldOutput,
+			eNotify(new ENotificationImpl(this, Notification.SET, SampleemfdomainPackage.TRANSITION__OUTPUT, oldOutput,
 					output));
 	}
 
@@ -273,7 +272,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 */
 	@Override
 	public State getSource() {
-		if (eContainerFeatureID() != sampleemfdomainPackage.TRANSITION__SOURCE)
+		if (eContainerFeatureID() != SampleemfdomainPackage.TRANSITION__SOURCE)
 			return null;
 		return (State) eInternalContainer();
 	}
@@ -284,7 +283,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * @generated
 	 */
 	public NotificationChain basicSetSource(State newSource, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject) newSource, sampleemfdomainPackage.TRANSITION__SOURCE, msgs);
+		msgs = eBasicSetContainer((InternalEObject) newSource, SampleemfdomainPackage.TRANSITION__SOURCE, msgs);
 		return msgs;
 	}
 
@@ -296,7 +295,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void setSource(State newSource) {
 		if (newSource != eInternalContainer()
-				|| (eContainerFeatureID() != sampleemfdomainPackage.TRANSITION__SOURCE && newSource != null)) {
+				|| (eContainerFeatureID() != SampleemfdomainPackage.TRANSITION__SOURCE && newSource != null)) {
 			if (EcoreUtil.isAncestor(this, newSource))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
@@ -304,12 +303,12 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newSource != null)
 				msgs = ((InternalEObject) newSource).eInverseAdd(this,
-						sampleemfdomainPackage.STATE__OUTGOING_TRANSITIONS, State.class, msgs);
+						SampleemfdomainPackage.STATE__OUTGOING_TRANSITIONS, State.class, msgs);
 			msgs = basicSetSource(newSource, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sampleemfdomainPackage.TRANSITION__SOURCE, newSource,
+			eNotify(new ENotificationImpl(this, Notification.SET, SampleemfdomainPackage.TRANSITION__SOURCE, newSource,
 					newSource));
 	}
 
@@ -321,12 +320,12 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case sampleemfdomainPackage.TRANSITION__TARGET:
+		case SampleemfdomainPackage.TRANSITION__TARGET:
 			if (target != null)
 				msgs = ((InternalEObject) target).eInverseRemove(this,
-						sampleemfdomainPackage.STATE__INCOMING_TRANSITIONS, State.class, msgs);
+						SampleemfdomainPackage.STATE__INCOMING_TRANSITIONS, State.class, msgs);
 			return basicSetTarget((State) otherEnd, msgs);
-		case sampleemfdomainPackage.TRANSITION__SOURCE:
+		case SampleemfdomainPackage.TRANSITION__SOURCE:
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			return basicSetSource((State) otherEnd, msgs);
@@ -342,9 +341,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case sampleemfdomainPackage.TRANSITION__TARGET:
+		case SampleemfdomainPackage.TRANSITION__TARGET:
 			return basicSetTarget(null, msgs);
-		case sampleemfdomainPackage.TRANSITION__SOURCE:
+		case SampleemfdomainPackage.TRANSITION__SOURCE:
 			return basicSetSource(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -358,8 +357,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-		case sampleemfdomainPackage.TRANSITION__SOURCE:
-			return eInternalContainer().eInverseRemove(this, sampleemfdomainPackage.STATE__OUTGOING_TRANSITIONS,
+		case SampleemfdomainPackage.TRANSITION__SOURCE:
+			return eInternalContainer().eInverseRemove(this, SampleemfdomainPackage.STATE__OUTGOING_TRANSITIONS,
 					State.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
@@ -373,17 +372,17 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case sampleemfdomainPackage.TRANSITION__INPUT:
+		case SampleemfdomainPackage.TRANSITION__INPUT:
 			return getInput();
-		case sampleemfdomainPackage.TRANSITION__TARGET:
+		case SampleemfdomainPackage.TRANSITION__TARGET:
 			if (resolve)
 				return getTarget();
 			return basicGetTarget();
-		case sampleemfdomainPackage.TRANSITION__NAME:
+		case SampleemfdomainPackage.TRANSITION__NAME:
 			return getName();
-		case sampleemfdomainPackage.TRANSITION__OUTPUT:
+		case SampleemfdomainPackage.TRANSITION__OUTPUT:
 			return getOutput();
-		case sampleemfdomainPackage.TRANSITION__SOURCE:
+		case SampleemfdomainPackage.TRANSITION__SOURCE:
 			return getSource();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -397,19 +396,19 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case sampleemfdomainPackage.TRANSITION__INPUT:
+		case SampleemfdomainPackage.TRANSITION__INPUT:
 			setInput((String) newValue);
 			return;
-		case sampleemfdomainPackage.TRANSITION__TARGET:
+		case SampleemfdomainPackage.TRANSITION__TARGET:
 			setTarget((State) newValue);
 			return;
-		case sampleemfdomainPackage.TRANSITION__NAME:
+		case SampleemfdomainPackage.TRANSITION__NAME:
 			setName((String) newValue);
 			return;
-		case sampleemfdomainPackage.TRANSITION__OUTPUT:
+		case SampleemfdomainPackage.TRANSITION__OUTPUT:
 			setOutput((String) newValue);
 			return;
-		case sampleemfdomainPackage.TRANSITION__SOURCE:
+		case SampleemfdomainPackage.TRANSITION__SOURCE:
 			setSource((State) newValue);
 			return;
 		}
@@ -424,19 +423,19 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case sampleemfdomainPackage.TRANSITION__INPUT:
+		case SampleemfdomainPackage.TRANSITION__INPUT:
 			setInput(INPUT_EDEFAULT);
 			return;
-		case sampleemfdomainPackage.TRANSITION__TARGET:
+		case SampleemfdomainPackage.TRANSITION__TARGET:
 			setTarget((State) null);
 			return;
-		case sampleemfdomainPackage.TRANSITION__NAME:
+		case SampleemfdomainPackage.TRANSITION__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case sampleemfdomainPackage.TRANSITION__OUTPUT:
+		case SampleemfdomainPackage.TRANSITION__OUTPUT:
 			setOutput(OUTPUT_EDEFAULT);
 			return;
-		case sampleemfdomainPackage.TRANSITION__SOURCE:
+		case SampleemfdomainPackage.TRANSITION__SOURCE:
 			setSource((State) null);
 			return;
 		}
@@ -451,15 +450,15 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case sampleemfdomainPackage.TRANSITION__INPUT:
+		case SampleemfdomainPackage.TRANSITION__INPUT:
 			return INPUT_EDEFAULT == null ? input != null : !INPUT_EDEFAULT.equals(input);
-		case sampleemfdomainPackage.TRANSITION__TARGET:
+		case SampleemfdomainPackage.TRANSITION__TARGET:
 			return target != null;
-		case sampleemfdomainPackage.TRANSITION__NAME:
+		case SampleemfdomainPackage.TRANSITION__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case sampleemfdomainPackage.TRANSITION__OUTPUT:
+		case SampleemfdomainPackage.TRANSITION__OUTPUT:
 			return OUTPUT_EDEFAULT == null ? output != null : !OUTPUT_EDEFAULT.equals(output);
-		case sampleemfdomainPackage.TRANSITION__SOURCE:
+		case SampleemfdomainPackage.TRANSITION__SOURCE:
 			return getSource() != null;
 		}
 		return super.eIsSet(featureID);

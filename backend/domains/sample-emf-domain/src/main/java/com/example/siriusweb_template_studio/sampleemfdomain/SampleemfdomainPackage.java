@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainFactory
+ * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainFactory
  * @model kind="package"
  * @generated
  */
-public interface sampleemfdomainPackage extends EPackage {
+public interface SampleemfdomainPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public interface sampleemfdomainPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	sampleemfdomainPackage eINSTANCE = com.example.siriusweb_template_studio.sampleemfdomain.impl.sampleemfdomainPackageImpl
+	SampleemfdomainPackage eINSTANCE = com.example.siriusweb_template_studio.sampleemfdomain.impl.SampleemfdomainPackageImpl
 			.init();
 
 	/**
@@ -62,7 +62,7 @@ public interface sampleemfdomainPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.FSMImpl
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.sampleemfdomainPackageImpl#getFSM()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.SampleemfdomainPackageImpl#getFSM()
 	 * @generated
 	 */
 	int FSM = 0;
@@ -126,7 +126,7 @@ public interface sampleemfdomainPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.StateImpl
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.sampleemfdomainPackageImpl#getState()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.SampleemfdomainPackageImpl#getState()
 	 * @generated
 	 */
 	int STATE = 1;
@@ -190,7 +190,7 @@ public interface sampleemfdomainPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.TransitionImpl
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.sampleemfdomainPackageImpl#getTransition()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.SampleemfdomainPackageImpl#getTransition()
 	 * @generated
 	 */
 	int TRANSITION = 2;
@@ -438,7 +438,7 @@ public interface sampleemfdomainPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	sampleemfdomainFactory getsampleemfdomainFactory();
+	SampleemfdomainFactory getSampleemfdomainFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -459,7 +459,7 @@ public interface sampleemfdomainPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.FSMImpl
-		 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.sampleemfdomainPackageImpl#getFSM()
+		 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.SampleemfdomainPackageImpl#getFSM()
 		 * @generated
 		 */
 		EClass FSM = eINSTANCE.getFSM();
@@ -501,7 +501,7 @@ public interface sampleemfdomainPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.StateImpl
-		 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.sampleemfdomainPackageImpl#getState()
+		 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.SampleemfdomainPackageImpl#getState()
 		 * @generated
 		 */
 		EClass STATE = eINSTANCE.getState();
@@ -543,7 +543,7 @@ public interface sampleemfdomainPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.TransitionImpl
-		 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.sampleemfdomainPackageImpl#getTransition()
+		 * @see com.example.siriusweb_template_studio.sampleemfdomain.impl.SampleemfdomainPackageImpl#getTransition()
 		 * @generated
 		 */
 		EClass TRANSITION = eINSTANCE.getTransition();
@@ -590,4 +590,4 @@ public interface sampleemfdomainPackage extends EPackage {
 
 	}
 
-} //sampleemfdomainPackage
+} //SampleemfdomainPackage

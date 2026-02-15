@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage
+ * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage
  * @generated
  */
-public interface sampleemfdomainFactory extends EFactory {
+public interface SampleemfdomainFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	sampleemfdomainFactory eINSTANCE = com.example.siriusweb_template_studio.sampleemfdomain.impl.sampleemfdomainFactoryImpl
+	SampleemfdomainFactory eINSTANCE = com.example.siriusweb_template_studio.sampleemfdomain.impl.SampleemfdomainFactoryImpl
 			.init();
 
 	/**
@@ -56,6 +56,6 @@ public interface sampleemfdomainFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	sampleemfdomainPackage getsampleemfdomainPackage();
+	SampleemfdomainPackage getSampleemfdomainPackage();
 
-} //sampleemfdomainFactory
+} //SampleemfdomainFactory

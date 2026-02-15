@@ -19,17 +19,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage
+ * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage
  * @generated
  */
-public class sampleemfdomainSwitch<T> extends Switch<T> {
+public class SampleemfdomainSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static sampleemfdomainPackage modelPackage;
+	protected static SampleemfdomainPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class sampleemfdomainSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public sampleemfdomainSwitch() {
+	public SampleemfdomainSwitch() {
 		if (modelPackage == null) {
-			modelPackage = sampleemfdomainPackage.eINSTANCE;
+			modelPackage = SampleemfdomainPackage.eINSTANCE;
 		}
 	}
 
@@ -66,21 +66,21 @@ public class sampleemfdomainSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case sampleemfdomainPackage.FSM: {
+		case SampleemfdomainPackage.FSM: {
 			FSM fsm = (FSM) theEObject;
 			T result = caseFSM(fsm);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case sampleemfdomainPackage.STATE: {
+		case SampleemfdomainPackage.STATE: {
 			State state = (State) theEObject;
 			T result = caseState(state);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case sampleemfdomainPackage.TRANSITION: {
+		case SampleemfdomainPackage.TRANSITION: {
 			Transition transition = (Transition) theEObject;
 			T result = caseTransition(transition);
 			if (result == null)
@@ -153,4 +153,4 @@ public class sampleemfdomainSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //sampleemfdomainSwitch
+} //SampleemfdomainSwitch

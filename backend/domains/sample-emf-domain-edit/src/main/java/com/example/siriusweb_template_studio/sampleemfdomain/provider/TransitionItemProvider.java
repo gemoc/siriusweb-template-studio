@@ -2,9 +2,8 @@
  */
 package com.example.siriusweb_template_studio.sampleemfdomain.provider;
 
+import com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage;
 import com.example.siriusweb_template_studio.sampleemfdomain.Transition;
-import com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -73,7 +72,7 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 						getResourceLocator(), getString("_UI_Transition_input_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Transition_input_feature",
 								"_UI_Transition_type"),
-						sampleemfdomainPackage.Literals.TRANSITION__INPUT, true, false, false,
+						SampleemfdomainPackage.Literals.TRANSITION__INPUT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -89,7 +88,7 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 						getResourceLocator(), getString("_UI_Transition_target_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Transition_target_feature",
 								"_UI_Transition_type"),
-						sampleemfdomainPackage.Literals.TRANSITION__TARGET, true, false, true, null, null, null));
+						SampleemfdomainPackage.Literals.TRANSITION__TARGET, true, false, true, null, null, null));
 	}
 
 	/**
@@ -104,7 +103,7 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 						getResourceLocator(), getString("_UI_Transition_name_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Transition_name_feature",
 								"_UI_Transition_type"),
-						sampleemfdomainPackage.Literals.TRANSITION__NAME, true, false, false,
+						SampleemfdomainPackage.Literals.TRANSITION__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -120,7 +119,7 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 						getResourceLocator(), getString("_UI_Transition_output_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Transition_output_feature",
 								"_UI_Transition_type"),
-						sampleemfdomainPackage.Literals.TRANSITION__OUTPUT, true, false, false,
+						SampleemfdomainPackage.Literals.TRANSITION__OUTPUT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -170,9 +169,9 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Transition.class)) {
-		case sampleemfdomainPackage.TRANSITION__INPUT:
-		case sampleemfdomainPackage.TRANSITION__NAME:
-		case sampleemfdomainPackage.TRANSITION__OUTPUT:
+		case SampleemfdomainPackage.TRANSITION__INPUT:
+		case SampleemfdomainPackage.TRANSITION__NAME:
+		case SampleemfdomainPackage.TRANSITION__OUTPUT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

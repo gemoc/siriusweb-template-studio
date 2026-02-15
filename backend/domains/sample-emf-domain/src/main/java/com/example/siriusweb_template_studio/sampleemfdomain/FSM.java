@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.example.siriusweb_template_studio.sampleemfdomain.FSM#getFinalState <em>Final State</em>}</li>
  * </ul>
  *
- * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getFSM()
+ * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getFSM()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface FSM extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getFSM_Name()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getFSM_Name()
 	 * @model
 	 * @generated
 	 */
@@ -55,7 +55,7 @@ public interface FSM extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owned States</em>' containment reference list.
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getFSM_OwnedStates()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getFSM_OwnedStates()
 	 * @see com.example.siriusweb_template_studio.sampleemfdomain.State#getOwningFSM
 	 * @model opposite="owningFSM" containment="true"
 	 * @generated
@@ -68,7 +68,7 @@ public interface FSM extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initial State</em>' reference.
 	 * @see #setInitialState(State)
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getFSM_InitialState()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getFSM_InitialState()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -90,7 +90,7 @@ public interface FSM extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Final State</em>' reference.
 	 * @see #setFinalState(State)
-	 * @see com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage#getFSM_FinalState()
+	 * @see com.example.siriusweb_template_studio.sampleemfdomain.SampleemfdomainPackage#getFSM_FinalState()
 	 * @model
 	 * @generated
 	 */
