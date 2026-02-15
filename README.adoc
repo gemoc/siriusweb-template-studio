@@ -21,13 +21,20 @@ Quick instruction to run the application in its simpliest form, using the defaul
 
 ### Start the application
 
-TODO fix the command to run the application, and update the instructions.
 [source, bash]
 ----
-mvn clean package
-java -jar backend/template-studio-backend/target/*.jar
+[source,shell]
 ----
-and then open your browser and navigate to: http://localhost:8080
+mvn -DskipTests -D"checkstyle.skip" install
+docker run -p 5433:5432 --name siriusweb-template-studio-postgres \
+                             -e POSTGRES_USER=dbuser \
+                             -e POSTGRES_PASSWORD=dbpwd \
+                             -e POSTGRES_DB=siriusweb-template-studio-db \
+                             -d postgres:12
+mvn spring-boot:run -DskipTests -D"checkstyle.skip" -D"spring-boot.run.profiles=dev"
+----
+
+and then open your browser and navigate to: http://localhost:8083
 
 == Project Structure
 

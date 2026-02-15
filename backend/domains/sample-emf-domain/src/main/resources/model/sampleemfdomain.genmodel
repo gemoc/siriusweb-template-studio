@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/sample-emf-domain/src/main/java" creationIcons="false"
+    editDirectory="/sample-emf-domain-edit/src/main/java" editorDirectory="/sample-emf-domain.editor/src-gen"
+    modelPluginID="sample-emf-domain" modelName="Sampleemfdomain" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0"
+    copyrightFields="false" editPluginID="sample-emf-domain-edit" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>sampleemfdomain.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="sampleemfdomain" basePackage="com.example.siriusweb_template_studio"
+      disposableProviderFactory="true" ecorePackage="sampleemfdomain.ecore#/">
+    <genClasses ecoreClass="sampleemfdomain.ecore#//FSM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sampleemfdomain.ecore#//FSM/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sampleemfdomain.ecore#//FSM/ownedStates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sampleemfdomain.ecore#//FSM/initialState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sampleemfdomain.ecore#//FSM/finalState"/>
+    </genClasses>
+    <genClasses ecoreClass="sampleemfdomain.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sampleemfdomain.ecore#//State/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sampleemfdomain.ecore#//State/outgoingTransitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sampleemfdomain.ecore#//State/incomingTransitions"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference sampleemfdomain.ecore#//State/owningFSM"/>
+    </genClasses>
+    <genClasses ecoreClass="sampleemfdomain.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sampleemfdomain.ecore#//Transition/input"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sampleemfdomain.ecore#//Transition/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sampleemfdomain.ecore#//Transition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sampleemfdomain.ecore#//Transition/output"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference sampleemfdomain.ecore#//Transition/source"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

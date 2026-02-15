@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sampleemfdomain -->
+      <package
+            uri="http://www.example.org/sampleemfdomain"
+            class="com.example.siriusweb_template_studio.sampleemfdomain.sampleemfdomainPackage"
+            genModel="src/main/resources/model/sampleemfdomain.genmodel"/>
+   </extension>
+
+</plugin>

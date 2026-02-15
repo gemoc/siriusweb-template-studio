@@ -13,6 +13,8 @@
         <module>backend/template-studio-parent</module>
         <module>backend/template-studio-app</module>
         <module>backend/template-studio-starter</module>
+        <module>backend/domains/sample-emf-domain</module>
+        <module>backend/domains/sample-emf-domain-edit</module>
     </modules>
 
 
