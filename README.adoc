@@ -1,0 +1,111 @@
+= siriusWeb-template-studio
+
+This project is a template for the development of Sirius Web applications. It provides basic structures and configurations to help developers get started quickly with their Sirius Web projects.
+It has some focuse on application with modelling, execution and analysis capabilities.
+
+== Description
+
+The project proposes an adaptable template supporting several development and deployment modes, including standalone and extension of the full Sirius Web application. It may in the future also supports different ways to provide the domain model, either as a reflective model (e.g., JSON Ecore and view exported from SiriusWeb) or as classic EMF jar files (model and model.edit).
+
+It also provides scripts to help rename the projects artefacts (e.g., package names, pom.xml, etc.) to fit the needs of the developers; and scripts to upgrade the project to the latest Sirius Web version.
+
+
+
+== Quick start 
+
+Quick instruction to run the application in its simpliest form, using the default Sirius web version and without UI customizations. (ie. only the backend modules are used; providing only backend driven UI features) See Project Structure section for more details on the different modules and their usage. 
+
+=== Prerequisites
+- Java 17+
+- Maven
+
+### Start the application
+
+TODO fix the command to run the application, and update the instructions.
+[source, bash]
+----
+mvn clean package
+java -jar backend/template-studio-backend/target/*.jar
+----
+and then open your browser and navigate to: http://localhost:8080
+
+== Project Structure
+
+
+The project supports several modes of development and deployment depending on the needs of the developers. 
+
+It can be started as an extension of the full Sirius Web application, or as a standalone application (possibly with a different set of features than the standard SiriusWeb application).
+
+It can provides domain model either in the form of a reflective model (e.g., JSON Ecore) or as classic EMF jar files (model and model.edit). 
+
+
+[NOTE]
+====
+The classic EMF jar files are preferred for devlopment involving strong typing, since they provide better support for code completion, refactoring, and other IDE features. The reflective model is more flexible and can be used in scenarios when a more generic approach is applicable (with the risk of less robustness if the domain concepts evolve).
+====
+
+The project is organized into the following modules:
+
+[source, tree]
+----
+siriusweb-template-studio/
+│
+├── pom.xml                        (parent Maven)
+│
+├── backend/                          (Spring Boot app Sirius Web)
+│   ├── template-studio-starter/      (starter module with common dependencies and configurations for the template studio 
+|   |                                  - can be included in both the standalone app and the Sirius Web extension)
+|   ├── template-studio-app/          (option A - standalone Spring Boot app  + Docker support) 
+|   ├── template-studio-components/   (reusable/independant services and components) 
+|   ├── template-studio-frontend/     (option B2 - deployment of the custom React app as a static resource in the Spring Boot app)
+|   ├── domains/                      (domain models)
+│   |   ├── sample-emf-domain/       
+│   |   │   ├── src/main/java/...          (generated EMF code)
+|   |   |   ├── src/main/resources/...     (Ecore + genmodel)
+│   |   │   │   ├── sample-emf.ecore
+│   │   |   │   └── sample-emf.genmodel
+│   │   |   └── pom.xml
+│   │   ├── sample-emf-domain-edit/        (optionnel EMF edit)
+│   │   │   ├── src/main/java/...          (generated EMF code)
+│   │       └── pom.xml
+│   └── releng/                     (build scripts / packaging) 
+│
+├── frontend/     (option B1 - dev React)
+|   └── template-studio/              (custom React app based on the Sirius Web components, with custom features and UI components)
+|   └── template-studio-components/   (widgets / React components)
+│
+└── releng/                      (build scripts / packaging)
+----
+
+
+== Running the Studio
+
+We provide two options:
+
+1. **Full embedded platform** (default)
+   - Runs the complete Sirius Web + template studio
+   - Recommended for onboarding and without specif UI need / see quick start
+
+2. **Optional deployment (`template-studio-app`)**
+   - Minimal assembly, suitable for integration or custom products
+   - Run with: 
+   TODO: update the command to run the application in this mode, and update the instructions.
+[source, bash]
+----
+mvn clean install
+mvn -D"checkstyle.skip" -pl com.example.siriusweb-template-studio:template-studio-app -DskipTests spring-boot:run -D"spring-boot.run.profiles=dev"
+----
+
+
+
+
+== Project implementation status
+
+- [ ] base template with the different modules and their dependencies
+- [ ] option A: standalone Spring Boot application with the template studio features, and Docker support
+- [ ] option B1: add a custom React application based on the Sirius Web components, with custom features and UI components; 
+- [ ] option B2: deploy custom React application as a static resource in the Spring Boot app
+- [ ] provide scripts to rename the projects artefacts (e.g., package names, pom.xml, etc.) to fit the needs of the developers
+- [ ] provide scripts to help upgrade the project to the latest Sirius Web version
+- [ ] documentation in the code and in the README to explain variation points and where to add/remove features depending on the needs of the developers (ie. fill the gap of Sirius Web documentation for our needs...)
+

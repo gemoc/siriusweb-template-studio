@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.example.siriusweb-template-studio</groupId>
+	<artifactId>siriusweb-template-studio-root</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>siriusweb-template-studio</name>
+	<description>siriusweb-template-studio-root</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>backend/template-studio-parent</module>
+        <module>backend/template-studio-app</module>
+        <module>backend/template-studio-starter</module>
+    </modules>
+
+
+    <build>
+        <plugins>
+            <plugin> <!-- avoid call of spring-boot:run on the root -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <skip>true</skip>
+            </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
