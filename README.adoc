@@ -23,8 +23,6 @@ Quick instruction to run the application in its simpliest form, using the defaul
 
 [source, bash]
 ----
-[source,shell]
-----
 mvn -DskipTests -D"checkstyle.skip" install
 docker run -p 5433:5432 --name siriusweb-template-studio-postgres \
                              -e POSTGRES_USER=dbuser \

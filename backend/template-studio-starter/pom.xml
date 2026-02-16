@@ -63,6 +63,12 @@
 			<version>${sirius.web.version}</version>
 		</dependency>
 -->
+
+		<dependency>
+			<groupId>com.example.siriusweb-template-studio</groupId>
+			<artifactId>sample-emf-domain-edit</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
