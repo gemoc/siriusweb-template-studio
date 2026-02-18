@@ -63,7 +63,13 @@
 			<version>${sirius.web.version}</version>
 		</dependency>
 -->
+		<dependency>
+			<groupId>org.eclipse.sirius</groupId>
+			<artifactId>sirius-web-application</artifactId>
+			<version>${sirius.web.version}</version>
+		</dependency>
 
+		<!-- Project internal dependencies -->
 		<dependency>
 			<groupId>com.example.siriusweb-template-studio</groupId>
 			<artifactId>sample-emf-domain-edit</artifactId>

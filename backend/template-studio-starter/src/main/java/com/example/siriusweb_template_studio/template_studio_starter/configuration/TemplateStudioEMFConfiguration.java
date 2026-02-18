@@ -1,4 +1,4 @@
-package com.example.siriusweb_template_studio;
+package com.example.siriusweb_template_studio.template_studio_starter.configuration;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.ecore.EPackage;
 import org.springframework.context.annotation.Bean;
