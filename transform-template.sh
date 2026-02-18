@@ -21,6 +21,13 @@ CLASS_RENAMES=(
   "Sampleemfdomain=EcodicoProcess"
 )
 
+# standard files and references to them (file names + content)
+FILE_RENAMES=(
+  "sampleemfdomain.aird=ecodicoprocess.aird"
+  "sampleemfdomain.ecore=ecodicoprocess.ecore"
+  "sampleemfdomain.genmodel=ecodicoprocess.genmodel"
+)
+
 # secific folder (file names + content)
 FOLDER_RENAMES=(
   "sample-emf-domain=ecodicoprocess-model"
@@ -97,6 +104,12 @@ for rule in "${CLASS_RENAMES[@]}"; do
   replace_in_files "$OLD" "$NEW"
 done
 
+for rule in "${FILE_RENAMES[@]}"; do
+  OLD="${rule%%=*}"
+  NEW="${rule#*=}"
+  replace_in_files "$OLD" "$NEW"
+done
+
 for rule in "${FOLDER_RENAMES[@]}"; do
   OLD="${rule%%=*}"
   NEW="${rule#*=}"
@@ -167,6 +180,23 @@ for rule in "${CLASS_RENAMES[@]}"; do
   NEW="${rule#*=}"
 
   find . -name "*$OLD*.java" | while read file; do
+    newfile=$(echo "$file" | sed "s|$OLD|$NEW|g")
+    echo "→ Rename $file → $newfile"
+    mv "$file" "$newfile"
+  done
+done
+
+
+########################################
+# 3. RENAMING FILES (file names)
+########################################
+
+echo "=== Renaming files ==="
+for rule in "${FILE_RENAMES[@]}"; do
+  OLD="${rule%%=*}"
+  NEW="${rule#*=}"
+
+  find . -name "*$OLD" | while read file; do
     newfile=$(echo "$file" | sed "s|$OLD|$NEW|g")
     echo "→ Rename $file → $newfile"
     mv "$file" "$newfile"
